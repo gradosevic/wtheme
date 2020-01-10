@@ -22,7 +22,13 @@
     <div id="container" class="container">
         <div class="row">
             <div class="col-md-4">
-                sidebar
+                <ul>
+                    <li><a>THE CONQUEROR</a></li>
+                    <li><a>MOUNTAIN MAP</a></li>
+                    <li><a>PLANNINGS</a></li>
+                    <li><a>NATURE SOUVENIRS</a></li>
+                    <li><a>OFFROAD</a></li>
+                </ul>
             </div>
             <div class="col-md-8">
                 <main id="content">
