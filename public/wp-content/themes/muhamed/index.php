@@ -1,8 +1,51 @@
-<?php get_header(); ?>
-<main id="content">
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <h2><a href="<?php the_permalink(); ?>"><?php echo the_title(); ?></a></h2>
-    <p><?php echo the_excerpt(); ?></p>
-<?php endwhile; endif; ?>
-</main>
-<?php get_footer(); ?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width" />
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<div id="background"></div>
+<div id="wrapper">
+    <header id="header" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/wp-content/themes/muhamed/img/Mountain-Conqueror.png" width="250" />
+            </div>
+            <div class="col-md-8">
+                <h1>"Life is a journey, not a destination"</br><span>Ralph Waldo Emerson</span></h1>
+            </div>
+        </div>
+    </header>
+    <div id="container" class="container">
+        <div class="row">
+            <div class="col-md-4">
+                sidebar
+            </div>
+            <div class="col-md-8">
+                <main id="content">
+                    <div>
+                        <h2><a href="#">Hard climbing shit.</a></h2>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    <div>
+                        <h2><a href="#">My paradise on earth.</a></h2>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" class="container-fluid">
+        <div id="copyright">
+            &copy; <?php echo esc_html( date_i18n( __( 'Y', 'muhamed' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+        </div>
+    </footer>
+
+</div>
+<?php wp_footer(); ?>
+</body>
+</html>
