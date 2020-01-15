@@ -57,6 +57,27 @@ h6 {
   z-index: -1;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.md-hide {
+  display: none !important;
+}
+
+.md-show {
+  display: inline-block !important;
+}
+
+@media (min-width: 768px) {
+  .md-hide {
+    display: inline-block !important;
+  }
+
+  .md-show {
+    display: none !important;
+  }
+}
 #header h1 {
   text-align: center;
   padding-top: 100px;
@@ -69,23 +90,10 @@ h6 {
   padding-top: 50px;
 }
 
-footer#footer {
-  background-color: rgba(42, 56, 68, 0.8);
-  position: fixed;
-  color: #fff;
-  bottom: 0;
-  text-align: center;
-  padding: 10px;
-}
-
-#container {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-#container .categories {
+.categories {
   text-align: center;
 }
-#container .categories li a {
+.categories li a {
   padding: 10px;
   font-size: 16px;
   display: block;
@@ -93,6 +101,11 @@ footer#footer {
   color: #fff;
   margin-bottom: 15px;
   cursor: pointer;
+}
+
+#container {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 #container img.circle {
   border-radius: 300px;
@@ -118,4 +131,61 @@ footer#footer {
 #container .post-intro .date {
   display: block;
   margin-top: 10px;
+}
+
+footer#footer {
+  background-color: rgba(42, 56, 68, 0.8);
+  position: fixed;
+  color: #fff;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+}
+footer#footer #copyright {
+  display: none;
+}
+footer#footer .menu {
+  position: relative;
+  font-size: 35px;
+  cursor: pointer;
+}
+footer#footer .categories {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-left: -10px;
+  margin-bottom: 22px;
+}
+footer#footer .categories li a {
+  font-size: 35px;
+  background-color: rgba(42, 56, 68, 0.8);
+  margin-bottom: 2px;
+}
+footer#footer .menu-close {
+  display: block !important;
+}
+footer#footer .menu:not(.menu-close) {
+  display: none !important;
+}
+footer#footer.menu-hidden .categories {
+  display: none;
+}
+footer#footer.menu-hidden .menu-close {
+  display: none !important;
+}
+footer#footer.menu-hidden .menu:not(.menu-close) {
+  display: block !important;
+}
+@media (min-width: 576px) {
+  footer#footer #copyright {
+    display: inline-block;
+  }
+  footer#footer .menu {
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    bottom: 7px;
+  }
 }

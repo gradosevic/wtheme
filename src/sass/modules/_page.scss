@@ -8,7 +8,23 @@
   background-size: cover;
   z-index: -1;
 }
-
+.text-center{
+  text-align: center;
+}
+.md-hide{
+  display: none !important;
+}
+.md-show{
+  display: inline-block !important;
+}
+@media (min-width: 768px) {
+  .md-hide{
+    display: inline-block !important;
+  }
+  .md-show{
+    display: none !important;
+  }
+}
 #header{
   h1{
     text-align: center;
@@ -22,32 +38,24 @@
     padding-top: 50px;
   }
 }
-footer#footer{
-  background-color: rgba(42, 56, 68, .8);
-  position: fixed;
-  color: #fff;
-  bottom: 0;
+.categories{
   text-align: center;
-  padding: 10px;
+  li{
+    a{
+      padding: 10px;
+      font-size: 16px;
+      display: block;
+      background: #000;
+      color: #fff;
+      margin-bottom: 15px;
+      cursor: pointer;
+
+    }
+  }
 }
 #container{
   padding-top: 100px;
   padding-bottom: 100px;
-  .categories{
-    text-align: center;
-    li{
-      a{
-        padding: 10px;
-        font-size: 16px;
-        display: block;
-        background: #000;
-        color: #fff;
-        margin-bottom: 15px;
-        cursor: pointer;
-
-      }
-    }
-  }
   img{
     &.circle{
       border-radius: 300px;
@@ -77,6 +85,66 @@ footer#footer{
     .date{
       display: block;
       margin-top: 10px;
+    }
+  }
+}
+footer#footer{
+  background-color: rgba(42, 56, 68, .8);
+  position: fixed;
+  color: #fff;
+  bottom: 0;
+  text-align: center;
+  padding: 10px;
+  #copyright{
+    display: none;
+  }
+  .menu{
+    position: relative;
+    font-size: 35px;
+    cursor: pointer;
+  }
+  .categories{
+    position:absolute;
+    bottom: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: -10px;
+    margin-bottom: 22px;
+    li{
+      a{
+        font-size: 35px;
+        background-color: rgba(42, 56, 68, 0.8);
+        margin-bottom: 2px;
+      }
+    }
+  }
+  .menu-close{
+    display: block !important;
+  }
+  .menu:not(.menu-close){
+    display: none !important;
+  }
+  &.menu-hidden{
+    .categories{
+      display: none;
+    }
+    .menu-close{
+      display: none !important;
+    }
+    .menu:not(.menu-close){
+      display: block !important;
+    }
+  }
+  @media (min-width: 576px) {
+    #copyright{
+      display: inline-block;
+    }
+    .menu {
+      position: absolute;
+      font-size: 20px;
+      right: 10px;
+      bottom: 7px;
     }
   }
 }

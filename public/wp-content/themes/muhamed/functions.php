@@ -6,6 +6,8 @@ function muhamed_theme_scripts(){
 
     wp_enqueue_script('bootstrap', get_template_directory_uri().'/bootstrap/js/bootstrap.min.js', array(), '1.0.0', true);
 
+    wp_enqueue_script('muhamed-script-js', get_template_directory_uri().'/js/script.js', array(), '1.0.0', true);
+
     if ( 'event' === get_post_type() ) {
         wp_enqueue_style('muhamed-event-css', get_template_directory_uri().'/css/event.css');
         wp_enqueue_script('muhamed-event-js', get_template_directory_uri().'/js/event.js', array(), '1.0.0', true);

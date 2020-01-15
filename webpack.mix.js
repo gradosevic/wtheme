@@ -16,6 +16,7 @@ mix.options({
 });
 
 mix.js('src/js/event.js', 'public/wp-content/themes/muhamed/js')
+    .js('src/js/script.js', 'public/wp-content/themes/muhamed/js')
     .sass('src/sass/style.scss', 'public/wp-content/themes/muhamed/css')
     .sass('src/sass/event.scss', 'public/wp-content/themes/muhamed/css');
 
