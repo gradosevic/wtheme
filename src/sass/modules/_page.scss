@@ -46,7 +46,7 @@
       font-size: 16px;
       display: block;
       background: #000;
-      color: #fff;
+      color: #fff !important;
       margin-bottom: 15px;
       cursor: pointer;
 
@@ -67,6 +67,7 @@
     }
   }
   .post-intro{
+    min-height: 500px;
     &:not(:last-child){
       margin-bottom: 50px;
       border-bottom: 1px solid #000;
@@ -97,6 +98,10 @@ footer#footer{
   padding: 10px;
   #copyright{
     display: none;
+    .fa{
+      font-size: 15px;
+      margin: 3px;
+    }
   }
   .menu{
     position: relative;

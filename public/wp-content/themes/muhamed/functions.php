@@ -14,3 +14,5 @@ function muhamed_theme_scripts(){
     }
 }
 add_action('wp_enqueue_scripts', 'muhamed_theme_scripts');
+
+add_theme_support( 'post-thumbnails' );
