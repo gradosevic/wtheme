@@ -12,7 +12,9 @@
     <header id="header" class="container">
         <div class="row text-center">
             <div class="col-md-3">
-                <img src="/wp-content/themes/muhamed/img/Mountain-Conqueror.png" width="250" />
+                <a href="/">
+                    <img src="/wp-content/themes/muhamed/img/Mountain-Conqueror.png" width="250" />
+                </a>
             </div>
             <div class="col-md-9 md-hide">
                 <h1>"Life is a journey, not a destination"</br><span>Ralph Waldo Emerson</span></h1>
