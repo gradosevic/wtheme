@@ -1,0 +1,15 @@
+.event-intro{
+  float:left;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .event-intro{
+    width: 50%;
+    padding-right: 10%;
+  }
+}
+.event-details-content{
+  margin-top: 40px;
+}
